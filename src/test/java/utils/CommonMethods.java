@@ -1,6 +1,13 @@
 package utils;
 
-import com.sun.org.apache.bcel.internal.generic.Select;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import steps.PageInitializer;
 
 import java.io.File;
@@ -8,6 +15,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
+
 
 public class CommonMethods extends PageInitializer {
 
@@ -105,5 +113,4 @@ public class CommonMethods extends PageInitializer {
         SimpleDateFormat sdf = new SimpleDateFormat(pattern);
         return sdf.format(date);
     }
-
 }
