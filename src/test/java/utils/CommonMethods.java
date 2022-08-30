@@ -1,6 +1,13 @@
 package utils;
 
 import com.sun.org.apache.bcel.internal.generic.Select;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import steps.PageInitializer;
 
 import java.io.File;
@@ -60,12 +67,6 @@ public class CommonMethods extends PageInitializer {
     public static void click(WebElement element){
         waitForClickability(element);
         element.click();
-    }
-
-    //select class for dropdown
-    public static void selectDropdown(WebElement element, String text){
-        Select s = new Select(element);
-        s.selectByVisibleText(text);
     }
 
     //js click
