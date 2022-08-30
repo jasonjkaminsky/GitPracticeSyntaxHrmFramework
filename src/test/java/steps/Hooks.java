@@ -1,5 +1,8 @@
 package steps;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import utils.CommonMethods;
 
 public class Hooks extends CommonMethods {
@@ -24,7 +27,7 @@ public class Hooks extends CommonMethods {
 
         //it will attach the screenshot in report
         //pic holds the screenshot, image/png defines the extension of image
-        // scenario.getname is to provide the name of screenshot in the report
+        // scenario.getname is to provide the name of screeshot in the report
         scenario.attach(pic, "image/png", scenario.getName());
         closeBrowser();
     }
